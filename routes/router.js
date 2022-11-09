@@ -173,6 +173,9 @@ router.post('/login', [
               // Cookie generation
               res.cookie("XenonStack", token, {
                 expires: new Date(Date.now() + 3600000), // 60 Mins
+                sameSite : "none",
+                secure: true,
+                domain: "localhost:3000",
                 httpOnly: true
               });
 
