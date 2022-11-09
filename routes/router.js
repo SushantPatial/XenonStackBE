@@ -174,12 +174,12 @@ router.post('/login', [
               found.token = token;
               let savedToken = await found.save();
 
-              console.log(savedToken);
+              // console.log(savedToken);
 
               // Cookie generation
-              res.cookie("XenonStack", token, {
-                expires: new Date(Date.now() + 3600000), // 60 Mins
-              });
+              // res.cookie("XenonStack", token, {
+              //   expires: new Date(Date.now() + 3600000), // 60 Mins
+              // });
 
               return res.status(201).json({
                 "status": true,
