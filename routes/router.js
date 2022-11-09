@@ -102,7 +102,8 @@ router.post('/register', [
                     name: name,
                     number: number,
                     email: email,
-                    password: hashedPassword
+                    password: hashedPassword,
+                    token: "null"
                   })
 
                   const savedUser = await newUser.save();
@@ -231,11 +232,11 @@ router.get("/logout", authenticate, async function (req, res) {
 
 // Verify if user is logged in
 router.post('/getAuthUser', async function (req, res) {
-  console.log(req.body);
-  // const userData = await User.findOne({
-  //   _id: req.body.token
-  // });
-  // res.send(userData);
+  // console.log(req.body.token);
+  const userData = await User.findOne({
+    token: req.body.token
+  });
+  res.send(userData);
 });
 
 
