@@ -36,12 +36,8 @@ npm start
 The server is now running at http://localhost:8000/ 
 
 ### Screenshots 📷
- **Home Page** 👋 ![image](https://user-images.githubusercontent.com/84243683/200951002-14282bff-d637-416a-ae46-e08a762da17f.png)
+ **Users Collection** 📂 ![image](https://user-images.githubusercontent.com/84243683/200952557-395a23e9-7cf9-4d6a-90e6-cf9601917d7d.png)
 
- **Contact Us** 📞 ![image](https://user-images.githubusercontent.com/84243683/200951099-070a1e00-c2b4-4ed4-8251-4e704f1ddea8.png)
-
- **Login** 🔒  ![image](https://user-images.githubusercontent.com/84243683/200951150-9f7ef93e-d10e-42c8-b4cb-72f6d3bc5086.png)
-
- **SignUp** ✅  ![image](https://user-images.githubusercontent.com/84243683/200951191-f07dbaeb-4752-48d9-a647-7c1a97da5338.png)
+ **Contacts Collection** 📂 ![image](https://user-images.githubusercontent.com/84243683/200952740-a965ff72-39e5-4bea-829d-79b3ef6ddcb8.png)
 
  
