@@ -170,8 +170,8 @@ router.post('/login', [
               // Token generation
               const token = await found.generateAuthToken();
 
-              result.token = token;
-              let savedToken = await result.save();
+              found.token = token;
+              let savedToken = await found.save();
 
               console.log(savedToken);
 
