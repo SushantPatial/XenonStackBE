@@ -31,7 +31,7 @@ API End Point: https://xenonstack-sp.herokuapp.com/
 ### Run the App 👩‍💻
 ```shell
 npm install
-npm start
+nodemon
 ```
 The server is now running at http://localhost:8000/ 
 
