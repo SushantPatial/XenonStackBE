@@ -170,6 +170,11 @@ router.post('/login', [
               // Token generation
               const token = await found.generateAuthToken();
 
+              result.token = token;
+              let savedToken = await result.save();
+
+              console.log(savedToken);
+
               // Cookie generation
               res.cookie("XenonStack", token, {
                 expires: new Date(Date.now() + 3600000), // 60 Mins
@@ -225,11 +230,12 @@ router.get("/logout", authenticate, async function (req, res) {
 })
 
 // Verify if user is logged in
-router.get('/getAuthUser', authenticate, async function (req, res) {
-  const userData = await User.findOne({
-    _id: req.userId
-  });
-  res.send(userData);
+router.post('/getAuthUser', async function (req, res) {
+  console.log(req.body);
+  // const userData = await User.findOne({
+  //   _id: req.body.token
+  // });
+  // res.send(userData);
 });
 
 
