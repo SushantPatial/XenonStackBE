@@ -203,32 +203,32 @@ router.post('/login', [
 })
 
 // Logout 
-router.get("/logout", authenticate, async function (req, res) {
-  try {
+// router.get("/logout", async function (req, res) {
+//   try {
 
-    // Deleting current token on logout from database
-    req.rootUser.tokens = req.rootUser.tokens.filter(function (currentToken) {
-      return currentToken.token !== req.token
-    })
+//     // Deleting current token on logout from database
+//     req.rootUser.tokens = req.rootUser.tokens.filter(function (currentToken) {
+//       return currentToken.token !== req.token
+//     })
 
-    // Cookie expiration
-    await res.cookie("XenonStack", {
-      expires: Date.now()
-    });
+//     // Cookie expiration
+//     await res.cookie("XenonStack", {
+//       expires: Date.now()
+//     });
 
-    req.rootUser.save();
+//     req.rootUser.save();
 
-    return res.status(201).json({
-      "status": true,
-      "message": "Logged out successfully!"
-    })
-  } catch (error) {
-    res.status(400).json({
-      "status": false,
-      "message": error
-    })
-  }
-})
+//     return res.status(201).json({
+//       "status": true,
+//       "message": "Logged out successfully!"
+//     })
+//   } catch (error) {
+//     res.status(400).json({
+//       "status": false,
+//       "message": error
+//     })
+//   }
+// })
 
 // Verify if user is logged in
 router.post('/getAuthUser', async function (req, res) {
